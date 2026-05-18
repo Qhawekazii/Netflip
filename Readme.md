@@ -34,7 +34,7 @@ This project is a Netflix-inspired landing page built using HTML and CSS. It dem
 
 ## Live Demo
 
-(Add Netlify link here)
+(https://netflip-clone.netlify.app/)
 
 ## Author
 
