@@ -1,0 +1,681 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+/* HERO SECTION */
+.hero{
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ),
+        url("background-placeholder.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
+
+    background: transparent;
+}
+
+/* LOGO */
+.logo{
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* SIGN IN BUTTON */
+.sign-in-btn{
+    background-color: #e50914;
+    color: white;
+
+    border: none;
+    padding: 10px 18px;
+
+    border-radius: 4px;
+
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover{
+    background-color: #c11119;
+}
+.hero-content{
+    height: calc(100vh - 80px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 0 20px;
+}
+
+.hero-content h1{
+    font-size: 4rem;
+    max-width: 700px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-content h3{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    max-width: 700px;
+}
+.email-form{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.email-form input{
+    width: 350px;
+    padding: 16px;
+
+    background: rgba(0,0,0,0.7);
+    border: 1px solid gray;
+    border-radius: 4px;
+
+    color: white;
+    font-size: 1rem;
+}
+
+.email-form button{
+    background-color: #e50914;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 16px 24px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.email-form button:hover{
+    background-color: #c11119;
+}
+
+.curve{
+    height: 100px;
+    background: black;
+
+    border-top: 5px solid #ff0055;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+
+    margin-top: -40px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* glow layer */
+.curve::before{
+    content: "";
+
+    position: absolute;
+    top: -60%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+        circle at top,
+        rgba(64, 97, 231, 0.4),
+        rgba(0, 0, 0, 0.1)
+    );
+
+    pointer-events: none;
+}
+
+/* optional thin red line */
+.curve::after{
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: rgb(111, 24, 29);
+}
+.curve-line{
+    width: 100%;
+    height: 100%;
+
+    border-top: 3px solid #ff0055;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.trending{
+    background: black;
+    color: white;
+
+    padding: 20px 10%;
+}
+
+.trending h2{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.trending-row{
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.trending-row::-webkit-scrollbar{
+    display: none;
+}
+
+.movie-card{
+    position: relative;
+
+    min-width: 180px;
+
+    transition: 0.3s ease;
+}
+
+.movie-card:hover{
+    transform: scale(1.05);
+}
+
+.movie-card img{
+    width: 100%;
+    border-radius: 12px;
+
+    display: block;
+}
+
+.movie-card span{
+    position: absolute;
+
+    left: -15px;
+    bottom: 10px;
+
+    font-size: 5rem;
+    font-weight: 800;
+
+    color: black;
+
+    -webkit-text-stroke: 2px white;
+}
+/* VIDEO */
+.video-section{
+    padding:50px 10%;
+}
+
+video{
+    width:100%;
+    border-radius:10px;
+}
+
+/* FAQ SECTION */
+
+.faq{
+    padding: 60px 8%;
+
+    background-color: black;
+
+    color: white;
+}
+
+/* HEADING */
+
+.faq h2{
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+}
+
+/* FAQ BOX */
+
+.faq details{
+    background-color: #2d2d2d;
+
+    margin-bottom: 10px;
+
+    padding: 20px;
+
+    cursor: pointer;
+}
+
+/* QUESTION */
+
+.faq summary{
+    font-size: 1.3rem;
+
+    font-weight: bold;
+
+    list-style: none;
+}
+
+/* REMOVE DEFAULT ARROW */
+
+.faq summary::-webkit-details-marker{
+    display: none;
+}
+
+/* ANSWER */
+
+.faq p{
+    margin-top: 15px;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    color: #d3d3d3;
+}
+
+/* HOVER EFFECT */
+
+.faq details:hover{
+    background-color: #414141;
+}
+
+/* MOBILE */
+
+@media(max-width: 600px){
+
+    .faq h2{
+        font-size: 1.5rem;
+    }
+
+    .faq summary{
+        font-size: 1rem;
+    }
+
+}
+/* SIGNUP SECTION */
+
+.signup-section{
+    text-align: center;
+
+    padding: 60px 8%;
+
+    color: white;
+}
+
+/* TITLE */
+
+.signup-section h3{
+    font-size: 1.3rem;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+}
+
+/* FORM LAYOUT */
+
+.signup-form{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+/* EMAIL INPUT */
+
+.signup-form input{
+    width: 350px;
+
+    padding: 18px;
+
+    font-size: 1rem;
+
+    border: 1px solid gray;
+
+    border-radius: 5px;
+
+    background-color: rgba(0,0,0,0.7);
+
+    color: white;
+}
+
+/* BUTTON */
+
+.signup-form button{
+    background-color: #e50914;
+
+    color: white;
+
+    border: none;
+
+    padding: 18px 30px;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+
+.signup-form button:hover{
+    background-color: #c11119;
+}
+
+/* MOBILE */
+
+@media(max-width: 600px){
+
+    .signup-form{
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .signup-form input{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .signup-form button{
+        width: 100%;
+        max-width: 400px;
+    }
+
+}
+
+/* FOOTER */
+
+footer{
+    background-color: black;
+
+    color: gray;
+
+    padding: 50px 8%;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TOP TEXT */
+
+footer p{
+    margin-bottom: 25px;
+}
+
+/* LINKS */
+
+.footer-links{
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+/* LINK STYLE */
+
+.footer-links a{
+    color: gray;
+
+    text-decoration: underline;
+
+    font-size: 14px;
+}
+
+/* HOVER EFFECT */
+
+.footer-links a:hover{
+    color: white;
+}
+
+/* LANGUAGE DROPDOWN */
+
+select{
+    background-color: black;
+
+    color: white;
+
+    border: 1px solid gray;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    margin-bottom: 25px;
+}
+
+/* COUNTRY TEXT */
+
+.country{
+    font-size: 14px;
+}
+
+/* TABLET */
+
+@media(max-width: 800px){
+
+    .footer-links{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width: 500px){
+
+    .footer-links{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* MORE REASONS SECTION */
+
+.reasons{
+    padding: 60px 8%;
+
+    background-color: black;
+
+    color: white;
+}
+
+/* HEADING */
+
+.reasons h2{
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+}
+
+/* CARDS CONTAINER */
+
+.cards{
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+/* INDIVIDUAL CARD */
+
+.card{
+    background: linear-gradient(
+        135deg,
+        #192247,
+        #210e17
+    );
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    min-height: 300px;
+
+    position: relative;
+
+    transition: 0.3s;
+
+    border: 1px solid transparent;
+}
+
+/* HOVER GLOW */
+
+.card:hover{
+    transform: translateY(-5px);
+
+    border: 1px solid #ff4fd8;
+
+    box-shadow:
+        0 0 10px #ff4fd8,
+        0 0 20px #ff4fd8,
+        0 0 40px rgba(255, 79, 216, 0.6);
+}
+
+/* CLICK EFFECT */
+
+.card:active{
+    transform: scale(0.98);
+
+    box-shadow:
+        0 0 15px #ff4fd8,
+        0 0 30px #b61894;
+}
+
+/* CARD TITLE */
+
+.card h3{
+    font-size: 1.4rem;
+
+    margin-bottom: 15px;
+}
+
+/* CARD TEXT */
+
+.card p{
+    color: #d3d3d3;
+
+    line-height: 1.6;
+}
+
+/* CARD ICON */
+
+.card img{
+    width: 70px;
+
+    position: absolute;
+
+    bottom: 20px;
+    right: 20px;
+}
+
+/* HOVER EFFECT */
+
+.card:hover{
+    transform: translateY(-5px);
+
+    transition: 0.3s;
+}
+
+/* TABLET */
+
+@media(max-width: 900px){
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width: 600px){
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+}
+.hero{
+    position: relative;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    color: white;
+
+    overflow: hidden;
+
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/ZA-en-20260511-TRIFECTA-perspective_9e8c1c43-f97e-4f1d-929b-9e33c2546363_large.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+.hero::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+}
